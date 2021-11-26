@@ -19,16 +19,16 @@ input::placeholder {
   color: #000;
   font-weight: 500;
 }
-.App {
-  animation: 5s weather-background infinite;
-  transition: animation 0.4s ease-out;
+
+.App.night {
+  background-image: url('./assets/background/night.webp');
+}
+.App.day {
+  background-image: url('./assets/background/after_noon.webp');
 }
 
 .Snow {
   background-image: url('./assets/background/Snowing.png');
-}
-.App.night {
-  background-image: url('./assets/background/winter-night.jpg');
 }
 .Clouds {
   background-image: url('./assets/background/Clouds.png');
@@ -129,16 +129,4 @@ main {
   font-size: 40px;
   font-weight: 700;
   text-shadow: 3px 6px rgba(50, 50, 70, 0.5);
-}
-
-@keyframes weather-background {
-  0% {
-    background-image: url('./assets/background/Rain.png');
-  }
-  50% {
-    background-image: url('./assets/background/Snowing.png');
-  }
-  100% {
-    background-image: url('./assets/background/Sunny.png');
-  }
 }

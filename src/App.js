@@ -54,10 +54,22 @@ function App() {
     return `${day} ${date} ${month} ${year}`;
   };
 
+  let dayTime = new Date();
+  let currentHour = dayTime.getHours();
+
+  let currentTime = '';
+  if (currentHour > 16) {
+    currentTime = 'night';
+  } else {
+    currentTime = 'day';
+  }
+
   return (
     <div
       className={
-        typeof weather.main != 'undefined' ? weather.weather[0].main : 'App'
+        typeof weather.main != 'undefined'
+          ? weather.weather[0].main
+          : `App ${currentTime}`
       }
     >
       <main>
