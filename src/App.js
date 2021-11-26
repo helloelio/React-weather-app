@@ -65,14 +65,12 @@ function App() {
   }
 
   return (
-    <div
-      className={
-        typeof weather.main != 'undefined'
-          ? weather.weather[0].main
-          : `App ${currentTime}`
-      }
-    >
-      <main>
+    <div className={`App ${currentTime}`}>
+      <main
+        className={
+          typeof weather.main != 'undefined' ? `${weather.weather[0].main}` : ``
+        }
+      >
         <div className="search-box">
           <input
             type="text"
